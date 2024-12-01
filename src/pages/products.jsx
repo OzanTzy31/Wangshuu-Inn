@@ -47,17 +47,11 @@ const ProductsPage = () => {
           >
             Produk Kami
           </p>
-          <p
-            className="lg:text-2xl font-semibold"
-            style={{ textShadow: "3px 3px 5px rgba(0, 0, 0, 0.3)" }}
-          >
-            Kami memberikan pelayanan yang terbaik
-          </p>
         </div>
       </div>
       <div
         id="hero"
-        className="lg:w-full lg:h-screen flex flex-col justify-center items-center pt-36"
+        className="lg:w-full min-h-screen flex flex-col justify-center items-center pt-36"
       >
         <div className="flex flex-wrap justify-center gap-6">
           {products.map((product) => (

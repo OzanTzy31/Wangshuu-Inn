@@ -1,64 +1,63 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
+import React, { useState } from "react";
+import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
+import { RxDotFilled } from "react-icons/rx";
 
-import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
+function ImageSlider() {
+  const slides = [
+    {
+      url: "/src/assets/img/room.jpg",
+    },
+    {
+      url: "/src/assets/img/Wangshu_Inn.jpg",
+    },
+    {
+      url: "/src/assets/img/room.jpg",
+    },
+  ];
 
-import slide_image_1 from "/src/assets/img/room.jpg";
-import slide_image_2 from "/src/assets/img/room.jpg";
-import slide_image_3 from "/src/assets/img/room.jpg";
-import slide_image_4 from "/src/assets/img/room.jpg";
-import slide_image_5 from "/src/assets/img/room.jpg";
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-const ImageSlider = () => {
+  const prevSlide = () => {
+    const isFirstSlide = currentIndex === 0;
+    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
+    setCurrentIndex(newIndex);
+  };
+
+  const nextSlide = () => {
+    const isLastSlide = currentIndex === slides.length - 1;
+    const newIndex = isLastSlide ? 0 : currentIndex + 1;
+    setCurrentIndex(newIndex);
+  };
+
+  const goToSlide = (slideIndex) => {
+    setCurrentIndex(slideIndex);
+  };
+
   return (
-    <div>
-      <Swiper
-        effect={"coverflow"}
-        grabCursor={true}
-        centeredSlides={true}
-        loop={true}
-        slidesPerView={"auto"}
-        coverflowEffect={{ rotate: 0, stretch: 0, depth: 100, modifier: 2.5 }}
-        pagination={{ el: ".swiper-pagination", clickable: true }}
-        navigation={{
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-          clickable: true,
-        }}
-        modules={[EffectCoverflow, Pagination, Navigation]}
-        className="swiper_container"
-      >
-        <SwiperSlide>
-          <img src={slide_image_1} alt="image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_2} alt="image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_3} alt="image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_4} alt="image" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={slide_image_5} alt="image" />
-        </SwiperSlide>
-
-        <div className="slider-controler">
-          <div className="swiper-button-prev slider-arrow">
-            <ion-icon name="arrow-back-outline"></ion-icon>
+    <div className="max-w-[768px] h-[524px] w-full m-auto py-16 px-4 relative group">
+      <div
+        style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
+        className="w-full h-full rounded-2xl bg-center bg-cover duration-500"
+      ></div>
+      <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
+        <BsChevronCompactLeft onClick={prevSlide} size={30} />
+      </div>
+      <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
+        <BsChevronCompactRight onClick={nextSlide} size={30} />
+      </div>
+      <div className="flex top-4 justify-center py-2">
+        {slides.map((slide, slideIndex) => (
+          <div
+            key={slideIndex}
+            onClick={() => goToSlide(slideIndex)}
+            className="text-2xl cursor-pointer"
+          >
+            <RxDotFilled />
           </div>
-          <div className="swiper-button-next slider-arrow">
-            <ion-icon name="arrow-forward-outline"></ion-icon>
-          </div>
-          <div className="swiper-pagination"></div>
-        </div>
-      </Swiper>
+        ))}
+      </div>
     </div>
   );
-};
+}
 
 export default ImageSlider;

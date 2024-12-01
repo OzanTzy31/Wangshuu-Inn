@@ -25,7 +25,9 @@ const Navbar = () => {
               <NavLink
                 to="/"
                 className={({ isActive }) =>
-                  isActive ? "text-gray-400 font-bold" : "text-white font-bold"
+                  isActive
+                    ? "text-gray-400 font-bold "
+                    : "text-white font-bold hover:text-gray-400 transition-colors duration-300"
                 }
               >
                 Home
@@ -35,7 +37,9 @@ const Navbar = () => {
               <NavLink
                 to="/products"
                 className={({ isActive }) =>
-                  isActive ? "text-gray-400 font-bold" : "text-white font-bold"
+                  isActive
+                    ? "text-gray-400 font-bold"
+                    : "text-white font-bold hover:text-gray-400 transition-colors duration-300"
                 }
               >
                 Products
@@ -45,7 +49,9 @@ const Navbar = () => {
               <NavLink
                 to="/contact"
                 className={({ isActive }) =>
-                  isActive ? "text-gray-400 font-bold" : "text-white font-bold"
+                  isActive
+                    ? "text-gray-400 font-bold"
+                    : "text-white font-bold hover:text-gray-400 transition-colors duration-300"
                 }
               >
                 Contact

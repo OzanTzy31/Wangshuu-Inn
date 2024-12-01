@@ -8,12 +8,12 @@ const DetailsPage = () => {
       <Navbar />
       <section
         id="header"
-        className="h-[50vh] flex flex-col items-center justify-center w-full bg-[url('../src/assets/img/room.jpg')] bg-contain bg-no-repeat"
+        className="h-[50vh] flex flex-col items-center justify-center w-full bg-[url('../src/assets/img/room.jpg')] bg-contain bg-no-repeat md:bg-cover md:bg-center"
       ></section>
       <section id="hero">
-        <div className="flex flex-col justify-center items-center text-center gap-y-3">
+        <div className="flex flex-col justify-center items-center text-center gap-y-3 py-20">
           <h1 className="text-2xl font-bold">Basic Room</h1>
-          <p>
+          <p className="w-1/2">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
             repellat recusandae accusamus mollitia esse. Unde temporibus
             suscipit tempora possimus, quae sequi quisquam eligendi in facilis,
@@ -25,8 +25,8 @@ const DetailsPage = () => {
             <li>lemari</li>
             <li>meja</li>
           </ul>
-          <ImageSlider />
         </div>
+        <ImageSlider />
       </section>
       <Footer />
     </>
