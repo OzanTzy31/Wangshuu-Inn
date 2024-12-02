@@ -1,4 +1,4 @@
-import Footer from "../components/Fragments/footer";
+import Footer from "../components/Fragments/Footer";
 import Navbar from "../components/Fragments/Header";
 import ImageSlider from "../components/Elements/Slider/Slider";
 
