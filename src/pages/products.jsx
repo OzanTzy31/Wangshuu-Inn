@@ -1,6 +1,6 @@
 import Navbar from "../components/Fragments/Header";
 import CardProduct from "../components/Fragments/CardProduct";
-import Footer from "../components/Fragments/footer";
+import Footer from "../components/Fragments/Footer";
 
 const products = [
   {
