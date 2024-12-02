@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const CardProduct = (Props) => {
   const { children } = Props;
   return (
@@ -29,12 +31,12 @@ const Body = (props) => {
 const Footer = (s) => {
   return (
     <div className="text-black px-8 pb-5">
-      <a
-        href={"/products/details"}
+      <Link
+        to={"/products/details"}
         className="bg-gray-500 py-2 px-3 rounded-md"
       >
         Details
-      </a>
+      </Link>
     </div>
   );
 };
