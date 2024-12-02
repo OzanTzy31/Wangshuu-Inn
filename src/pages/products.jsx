@@ -6,21 +6,21 @@ const products = [
   {
     id: 1,
     title: "Basic Room",
-    image: "../public/img/room.jpg",
+    image: "/img/room.jpg",
     desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
     Officia at reprehenderit soluta, porro iste nostrum distinctio et natus molestiae obcaecati.`,
   },
   {
     id: 2,
     title: "Medium Room",
-    image: "../public/img/room.jpg",
+    image: "/img/room.jpg",
     desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
     Officia at reprehenderit soluta, porro iste nostrum distinctio et natus molestiae obcaecati.`,
   },
   {
     id: 3,
     title: "Deluxe Room",
-    image: "../public/img/room.jpg",
+    image: "/img/room.jpg",
     desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
     Officia at reprehenderit soluta, porro iste nostrum distinctio et natus molestiae obcaecati.`,
   },
