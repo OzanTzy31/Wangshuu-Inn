@@ -6,7 +6,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="md:hidden text-white relative z-10">
+      <div className="md:hidden text-white relative z-10 px-5">
         <button className="menu-btn" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           <span className="material-symbols-rounded text-white">menu</span>
         </button>
@@ -15,8 +15,8 @@ const Navbar = () => {
       <div
         className={`${
           isMenuOpen
-            ? "block bg-gray-700 absolute top-[80%] right-4 p-3 pr-10 rounded-lg"
-            : "hidden"
+            ? "block w-full bg-gray-700 absolute top-0 p-3 pt-16 rounded-lg transform translate-y-0 transition-all duration-300"
+            : "hidden transform -translate-y-full lg:-translate-y-0"
         } md:block`}
       >
         <nav>

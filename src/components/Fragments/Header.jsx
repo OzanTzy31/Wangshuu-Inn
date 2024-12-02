@@ -28,7 +28,7 @@ const Navbar = () => {
           : "transition duration-300 ease-in-out"
       }`}
     >
-      <div className="max-w-screen-2xl w-full mx-auto px-4 flex justify-between items-center md:px-6 md:grid md:grid-cols-[2fr,3fr]">
+      <div className="max-w-screen-2xl w-full mx-auto flex justify-between items-center md:px-6 md:grid md:grid-cols-[2fr,3fr]">
         <Logo />
         <NavbarMenu />
       </div>

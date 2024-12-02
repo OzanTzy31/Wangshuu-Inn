@@ -11,13 +11,13 @@ const Footer = () => {
           <h2 className="font-bold lg:text-2xl mb-2">Navigation</h2>
           <ul>
             <li>
-              <a href="">Home</a>
+              <a href="/">Home</a>
             </li>
             <li>
-              <a href="">Products</a>
+              <a href="/products">Products</a>
             </li>
             <li>
-              <a href="">Contact</a>
+              <a href="/contact">Contact</a>
             </li>
           </ul>
         </div>
