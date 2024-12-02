@@ -4,7 +4,7 @@ const Home = () => {
       className="flex flex-wrap w-screen h-screen bg-cover bg-center"
       style={{
         backgroundImage:
-          "linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../src/assets/img/Wangshu_Inn.jpg)",
+          "linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/Wangshu_Inn.jpg)",
       }}
     >
       <div className="flex flex-col justify-center w-full text-white text-center font-default">

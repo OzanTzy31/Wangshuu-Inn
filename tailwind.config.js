@@ -4,8 +4,8 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        "wangshu-img": "url('./src/assets/img/Wangshu_Inn.jpg')",
-        "contact-bg": "url('./src/assets/img/room.jpg')",
+        "wangshu-img": "url('/img/Wangshu_Inn.jpg')",
+        "contact-bg": "url('/img/room.jpg')",
       },
       fontFamily: {
         logo: ['"Genshin Impact DRIP FONT"'],

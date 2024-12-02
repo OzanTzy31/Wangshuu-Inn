@@ -8,7 +8,7 @@ const DetailsPage = () => {
       <Navbar />
       <section
         id="header"
-        className="h-[50vh] flex flex-col items-center justify-center w-full bg-[url('../src/assets/img/room.jpg')] bg-contain bg-no-repeat md:bg-cover md:bg-center"
+        className="h-[50vh] flex flex-col items-center justify-center w-full bg-[url('/img/room.jpg')] bg-contain bg-no-repeat md:bg-cover md:bg-center"
       ></section>
       <section id="hero">
         <div className="flex flex-col justify-center items-center text-center gap-y-3 py-20">

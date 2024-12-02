@@ -6,7 +6,7 @@ const Contact = () => {
       className="min-h-screen flex items-center justify-center"
       style={{
         backgroundImage:
-          "linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../src/assets/img/room.jpg)",
+          "linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/room.jpg)",
       }}
     >
       <div className="mx-auto p-6 backdrop-blur-lg rounded-lg shadow-md lg:w-1/2">

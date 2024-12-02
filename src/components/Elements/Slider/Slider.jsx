@@ -5,13 +5,13 @@ import { RxDotFilled } from "react-icons/rx";
 function ImageSlider() {
   const slides = [
     {
-      url: "/src/assets/img/room.jpg",
+      url: "/img/room.jpg",
     },
     {
-      url: "/src/assets/img/Wangshu_Inn.jpg",
+      url: "/img/Wangshu_Inn.jpg",
     },
     {
-      url: "/src/assets/img/room.jpg",
+      url: "/img/room.jpg",
     },
   ];
 

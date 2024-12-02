@@ -6,24 +6,21 @@ const products = [
   {
     id: 1,
     title: "Basic Room",
-    image: "../src/assets/img/room.jpg",
-    price: "Rp 200.000",
+    image: "../public/img/room.jpg",
     desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
     Officia at reprehenderit soluta, porro iste nostrum distinctio et natus molestiae obcaecati.`,
   },
   {
     id: 2,
     title: "Medium Room",
-    image: "../src/assets/img/room.jpg",
-    price: "Rp 500.000",
+    image: "../public/img/room.jpg",
     desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
     Officia at reprehenderit soluta, porro iste nostrum distinctio et natus molestiae obcaecati.`,
   },
   {
     id: 3,
     title: "Deluxe Room",
-    image: "../src/assets/img/room.jpg",
-    price: "Rp 1.000.000",
+    image: "../public/img/room.jpg",
     desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
     Officia at reprehenderit soluta, porro iste nostrum distinctio et natus molestiae obcaecati.`,
   },
@@ -37,7 +34,7 @@ const ProductsPage = () => {
         className="flex flex-wrap w-screen h-screen bg-cover bg-center"
         style={{
           backgroundImage:
-            "linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../src/assets/img/room.jpg)",
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/room.jpg)",
         }}
       >
         <div className="flex flex-col justify-center w-full text-white text-center font-default">
