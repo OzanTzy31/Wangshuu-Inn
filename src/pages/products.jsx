@@ -6,21 +6,21 @@ const products = [
   {
     id: 1,
     title: "Basic Room",
-    image: "/img/room.jpg",
+    image: "/img/medium.jpg",
     desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
     Officia at reprehenderit soluta, porro iste nostrum distinctio et natus molestiae obcaecati.`,
   },
   {
     id: 2,
     title: "Medium Room",
-    image: "/img/room.jpg",
+    image: "/img/medium.jpg",
     desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
     Officia at reprehenderit soluta, porro iste nostrum distinctio et natus molestiae obcaecati.`,
   },
   {
     id: 3,
     title: "Deluxe Room",
-    image: "/img/room.jpg",
+    image: "/img/deluxe_3.jpg",
     desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
     Officia at reprehenderit soluta, porro iste nostrum distinctio et natus molestiae obcaecati.`,
   },
@@ -54,10 +54,11 @@ const ProductsPage = () => {
           {products.map((product) => (
             <CardProduct key={product.id}>
               <CardProduct.Header image={product.image}></CardProduct.Header>
-              <CardProduct.Body title={product.title}>
-                {product.desc}
-              </CardProduct.Body>
-              <CardProduct.Footer price={product.price}></CardProduct.Footer>
+              <CardProduct.Body
+                title={product.title}
+                desc={product.desc}
+              ></CardProduct.Body>
+              <CardProduct.Footer id={product.id}></CardProduct.Footer>
             </CardProduct>
           ))}
         </div>

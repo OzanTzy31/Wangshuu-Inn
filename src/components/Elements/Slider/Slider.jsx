@@ -11,7 +11,7 @@ function ImageSlider() {
       url: "/img/Wangshu_Inn.jpg",
     },
     {
-      url: "/img/room.jpg",
+      url: "/img/medium.png",
     },
   ];
 

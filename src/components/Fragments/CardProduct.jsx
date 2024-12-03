@@ -10,8 +10,12 @@ const CardProduct = (Props) => {
 const Header = (props) => {
   const { image } = props;
   return (
-    <a href="#">
-      <img src={image} alt="product" className="w-full max-w-lg" />
+    <a href="#" className="flex justify-center">
+      <img
+        src={image}
+        alt="product"
+        className="w-3/4 md:w-full max-w-lg rounded-md"
+      />
     </a>
   );
 };
@@ -28,11 +32,12 @@ const Body = (props) => {
   );
 };
 
-const Footer = (s) => {
+const Footer = (props) => {
+  const { id } = props;
   return (
     <div className="text-black px-8 pb-5">
       <Link
-        to={"/products/details"}
+        to={`/products/details/${id}`}
         className="bg-gray-500 py-2 px-3 rounded-md"
       >
         Details

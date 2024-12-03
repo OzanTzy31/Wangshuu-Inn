@@ -1,33 +1,58 @@
+import { useParams } from "react-router-dom";
 import Footer from "../components/Fragments/Footer";
 import Navbar from "../components/Fragments/Header";
-import ImageSlider from "../components/Elements/Slider/Slider";
+import DetailsProduct from "../components/Fragments/DetailsProduct";
+
+const details = [
+  {
+    id: 1,
+    title: "Basic Room",
+    image: "bg-[url('/img/medium.jpg')]",
+    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Officia at reprehenderit soluta, porro iste nostrum distinctio et natus molestiae obcaecati.`,
+  },
+  {
+    id: 2,
+    title: "Medium Room",
+    image: "bg-[url('/img/medium.jpg')]",
+    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Officia at reprehenderit soluta, porro iste nostrum distinctio et natus molestiae obcaecati.`,
+  },
+  {
+    id: 3,
+    title: "Deluxe Room",
+    image: "bg-[url('/img/deluxe_3.jpg')]",
+    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Officia at reprehenderit soluta, porro iste nostrum distinctio et natus molestiae obcaecati.`,
+    features: (
+      <ul>
+        <li>Large Bed</li>
+        <li>Sofa</li>
+        <li>Tea Spot</li>
+        <li>Cool Ornament and Painting</li>
+      </ul>
+    ),
+  },
+];
 
 const DetailsPage = () => {
+  const { id } = useParams();
+  const detail = details.find((detail) => detail.id === parseInt(id));
+
+  if (!detail) return <div>Product not found</div>;
+
   return (
     <>
       <Navbar />
-      <section
-        id="header"
-        className="h-[50vh] flex flex-col items-center justify-center w-full bg-[url('/img/room.jpg')] bg-contain bg-no-repeat md:bg-cover md:bg-center"
-      ></section>
-      <section id="hero">
-        <div className="flex flex-col justify-center items-center text-center gap-y-3 py-20">
-          <h1 className="text-2xl font-bold">Basic Room</h1>
-          <p className="w-1/2">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-            repellat recusandae accusamus mollitia esse. Unde temporibus
-            suscipit tempora possimus, quae sequi quisquam eligendi in facilis,
-            quam perspiciatis incidunt at animi.
-          </p>
-          <h2 className="text-2xl font-bold">Room Features</h2>
-          <ul>
-            <li>Bed</li>
-            <li>lemari</li>
-            <li>meja</li>
-          </ul>
-        </div>
-        <ImageSlider />
-      </section>
+      <DetailsProduct>
+        <DetailsProduct.Header
+          background={detail.image}
+        ></DetailsProduct.Header>
+        <DetailsProduct.Body title={detail.title} desc={detail.desc}>
+          {detail.features}
+        </DetailsProduct.Body>
+        <DetailsProduct.Footer></DetailsProduct.Footer>
+      </DetailsProduct>
       <Footer />
     </>
   );
